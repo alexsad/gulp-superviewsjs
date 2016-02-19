@@ -1,0 +1,39 @@
+{
+  "name": "gulp-superviewsjs",
+  "version": "1.0.0",
+  "description": "plugin GULP to convert template superview to Incremental DOM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsad/gulp-superviewsjs.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulp",
+    "IDOM",
+    "incremental",
+    "DOM",
+    "Template",
+    "convert",
+    "superviewsjs"
+  ],
+  "author": "alexsad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexsad/gulp-superviewsjs/issues"
+  },
+  "homepage": "https://github.com/alexsad/gulp-superviewsjs#readme",
+  "dependencies": {    
+	"gulp": "^3.9.1"
+	,"gulp-util": "^3.0.1"
+	,"through-gulp": "^0.5.0"    
+    ,"superviews.js": "0.0.8"
+  },
+  "devDependencies": {
+  }
+}
