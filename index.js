@@ -11,16 +11,10 @@ var gutil = require('gulp-util');
 var File = gutil.File;
 var PluginError = gutil.PluginError;
 
-var Concat = require('concat-with-sourcemaps');
-
 // file can be a vinyl file object or a string
 // when a string it will construct a new one
 module.exports = function(file, opt) {
-	if (!file) {
-		throw new PluginError('gulp-concat', 'Missing file option for gulp-concat');
-	}
 	opt = opt || {};
-
 	// to preserve existing |undefined| behaviour and to introduce |newLine: ""| for binaries
 	if (typeof opt.newLine !== 'string') {
 		opt.newLine = gutil.linefeed;
