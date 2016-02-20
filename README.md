@@ -32,5 +32,6 @@ gulp.task('superviews2IDOM',function(){
     .pipe(gulp.dest(distPackage));
 });
 ```
+## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
