@@ -1,5 +1,5 @@
 # gulp-superviewsjs
-A plugin to use the convert template <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a> to Incremental DOM into gulp
+A simple gulp plugin to use the convert template <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a> ,that convert HTML to Incremental DOM.
 
 ####how to install:
 
