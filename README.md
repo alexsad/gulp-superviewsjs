@@ -1,11 +1,17 @@
 # gulp-superviewsjs
-A simple gulp plugin to use <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a>, a Template engine for google incremental-DOM.
+gulp-superviewsjs is a simple [gulp](https://github.com/wearefractal/gulp) plugin to use <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a>, a Template engine for google incremental-DOM.
 
-####how to install:
+[![NPM](https://nodei.co/npm/gulp-superviewsjs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-superviewsjs/)
+
+[![build status](https://secure.travis-ci.org/hparra/gulp-superviewsjs.svg)](http://travis-ci.org/hparra/gulp-superviewsjs)
+[![devDependency Status](https://david-dm.org/hparra/gulp-superviewsjs/dev-status.svg)](https://david-dm.org/hparra/gulp-superviewsjs#info=devDependencies)
+
+
+####Install
 
 'npm install gulp-superviewsjs --save-dev'
 
-####how to use in Gulpfile.js
+####Usage
 
 ```js
 var superviewsjs = require('gulp-superviewsjs');//import the plugin
@@ -14,9 +20,11 @@ pipe(superviewsjs())
 //..pass to next pipe ;)
 ```
 
-####A more "complex" example (with "rename" gulp plugin):
+####A more "complex" example (with "<a href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a>" gulp plugin):
 
 ```js
+var rename = require("gulp-rename");
+
 gulp.task('superviews2IDOM',function(){
     return gulp.src([
         "/**/template/*.html"
@@ -28,3 +36,5 @@ gulp.task('superviews2IDOM',function(){
     .pipe(gulp.dest(distPackage));
 });
 ```
+
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)
