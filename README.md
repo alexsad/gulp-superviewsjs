@@ -14,7 +14,7 @@ pipe(superviewsjs())
 //..pass to next pipe ;)
 ```
 
-####A more "complex" exemple (with "rename" gulp plugin):
+####A more "complex" example (with "rename" gulp plugin):
 
 ```js
 gulp.task('superviews2IDOM',function(){
