@@ -3,10 +3,6 @@ gulp-superviewsjs is a simple [gulp](https://github.com/wearefractal/gulp) plugi
 
 [![NPM](https://nodei.co/npm/gulp-superviewsjs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-superviewsjs/)
 
-[![build status](https://secure.travis-ci.org/hparra/gulp-superviewsjs.svg)](http://travis-ci.org/hparra/gulp-superviewsjs)
-[![devDependency Status](https://david-dm.org/hparra/gulp-superviewsjs/dev-status.svg)](https://david-dm.org/hparra/gulp-superviewsjs#info=devDependencies)
-
-
 ####Install
 
 'npm install gulp-superviewsjs --save-dev'
