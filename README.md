@@ -1,5 +1,5 @@
 # gulp-superviewsjs
-plugin GULP to convert template superview to Incremental DOM
+A plugin to use the convert template <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a> to Incremental DOM into gulp
 
 ####how to install:
 
@@ -14,7 +14,7 @@ pipe(superviewsjs())
 //..pass to next pipe ;)
 ```
 
-####A more complex exemple (with rename gulp plugin or any others):
+####A more "complex" exemple (with "rename" gulp plugin):
 
 ```js
 gulp.task('superviews2IDOM',function(){
