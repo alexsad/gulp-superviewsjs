@@ -1,11 +1,13 @@
 # gulp-superviewsjs
-plugin GULP to convert template superview to Incremental DOM
+gulp-superviewsjs is a simple [gulp](https://github.com/wearefractal/gulp) plugin to use <a href="https://github.com/davidjamesstone/superviews.js">superviewjs</a>, a Template engine for google incremental-DOM.
 
-####how to install:
+[![NPM](https://nodei.co/npm/gulp-superviewsjs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-superviewsjs/)
+
+####Install
 
 'npm install gulp-superviewsjs --save-dev'
 
-####how to use in Gulpfile.js
+####Usage
 
 ```js
 var superviewsjs = require('gulp-superviewsjs');//import the plugin
@@ -14,9 +16,11 @@ pipe(superviewsjs())
 //..pass to next pipe ;)
 ```
 
-####A more complex exemple (with rename gulp plugin or any others):
+####A more "complex" example (with "<a href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a>" gulp plugin):
 
 ```js
+var rename = require("gulp-rename");
+
 gulp.task('superviews2IDOM',function(){
     return gulp.src([
         "/**/template/*.html"
@@ -28,3 +32,6 @@ gulp.task('superviews2IDOM',function(){
     .pipe(gulp.dest(distPackage));
 });
 ```
+## License
+
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)
