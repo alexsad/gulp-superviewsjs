@@ -23,7 +23,7 @@ module.exports = function(file, opt) {
 		if (file.isNull()) {}
 		if (file.isBuffer()) {           
 			var templateFile = new Buffer(decoder.write(file.contents)); 
-			templateFile = superviewjs(decoder.write(templateFile));
+			templateFile = superviewjs(decoder.write(templateFile).replace(/[\n\t\r]/g," "));
 			file.contents = new Buffer(templateFile);
 		}
 		if (file.isStream()) {}
