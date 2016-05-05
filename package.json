@@ -30,9 +30,9 @@
   "homepage": "https://github.com/alexsad/gulp-superviewsjs#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-util": "^3.0.1",
+    "gulp-util": "^3.0.7",
     "through-gulp": "^0.5.0",
-    "superviews.js": "0.0.8"
+    "superviews.js": "0.4.2"
   },
   "devDependencies": {}
 }
