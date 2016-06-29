@@ -8,6 +8,7 @@ var superviews = require("superviews.js");
 // when a string it will construct a new one
 module.exports = function(opt) {
 	opt = opt || {};
+	opt.mode = opt.mode || "es6";
 	// to preserve existing |undefined| behaviour and to introduce |newLine: ""| for binaries
 	if (typeof opt.newLine !== 'string') {
 		opt.newLine = '\n';
@@ -16,7 +17,7 @@ module.exports = function(opt) {
 		if (file.isNull()) {}
 		if (file.isBuffer()) {
 			var templateFile = new Buffer(decoder.write(file.contents));
-			templateFile = superviews(decoder.write(templateFile).replace(/[\n\t\r]/g," "), null, null, opt.es6);
+			templateFile = superviews(decoder.write(templateFile).replace(/[\n\t\r]/g," "), null, null, opt.mode);
 			file.contents = new Buffer(templateFile);
 		}
 		if (file.isStream()) {}
