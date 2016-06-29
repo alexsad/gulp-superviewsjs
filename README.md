@@ -10,9 +10,9 @@ gulp-superviewsjs is a simple [gulp](https://github.com/wearefractal/gulp) plugi
 ####Usage
 
 ```js
-var superviewsjs = require('gulp-superviewsjs');//import the plugin
+var gulp_superviewsjs = require('gulp-superviewsjs');//import the plugin
 // your code here!!
-pipe(superviewsjs())
+pipe(gulp_superviewsjs())
 //..pass to next pipe ;)
 ```
 
@@ -25,7 +25,7 @@ gulp.task('superviews2IDOM',function(){
     return gulp.src([
         "/**/template/*.html"
     ])
-    .pipe(superviewsjs())
+    .pipe(gulp_superviewsjs({mode:"es6"}))
     .pipe(rename({
         extname: ".js"
     }))
