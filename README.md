@@ -33,8 +33,8 @@ gulp.task('superviews2IDOM',function(){
 });
 ```
 
-### Options
-mode = "es6","cjs","browser" or "amd"
+#### API
+mode = "es6", "cjs", "browser" or "amd"
 ```
 {mode:"es6"}
 ```
