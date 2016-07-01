@@ -32,6 +32,13 @@ gulp.task('superviews2IDOM',function(){
     .pipe(gulp.dest(distPackage));
 });
 ```
+
+### Options
+mode = "es6","cjs","browser" or "amd"
+```
+{mode:"es6"}
+```
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
