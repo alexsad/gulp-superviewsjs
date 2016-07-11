@@ -15,9 +15,15 @@ module.exports = function(opt) {
 	}
 	return through(function(file, encoding, callback) {
 		if (file.isNull()) {}
-		if (file.isBuffer()) {
-			var templateFile = new Buffer(decoder.write(file.contents));
-			templateFile = superviews(decoder.write(templateFile).replace(/[\n\t\r]/g," "), null, null, opt.mode);
+		if (file.isBuffer()) {			
+			var templateFile = new Buffer(decoder.write(file.contents));			
+			templateFile = superviews(
+										decoder.write(templateFile)
+										.replace(/<require from="([^"]+)"/g,"<delegating-import props=\"{{from:'$1'}}\"")
+										.replace(/<\/require>/g,"</delegating-import>")										
+										.replace(/[\n\t\r]/g," ")
+										.replace(/ (\w*)\.((trigger)|(delegate))="([^"]+)"/g," on$1=\"{$event.preventDefault();$5}\"")
+			, null, null, opt.mode);			
 			file.contents = new Buffer(templateFile);
 		}
 		if (file.isStream()) {}
