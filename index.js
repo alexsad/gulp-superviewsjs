@@ -19,6 +19,9 @@ module.exports = function(opt) {
 			var templateFile = new Buffer(decoder.write(file.contents));			
 			templateFile = superviews(
 										decoder.write(templateFile)
+										.replace(/(<\w+-\w+[^ ])(.+?>)/g,function($0,$1,$2){
+											return $1+' props={{attr_only_to_update_component:"123456",'+$2.replace(/"="/g,"\":\"").replace(/ /g,",").replace(/>$/g,"").replace(/^,/g,"")+'}}>';
+										})
 										.replace(/<require from="([^"]+)"/g,"<delegating-import props=\"{{from:'$1'}}\"")
 										.replace(/<\/require>/g,"</delegating-import>")										
 										.replace(/[\n\t\r]/g," ")
