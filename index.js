@@ -20,7 +20,11 @@ module.exports = function(opt) {
 			templateFile = superviews(
 										decoder.write(templateFile)
 										.replace(/(<\w+-\w+[^ ])(.+?>)/g,function($0,$1,$2){
-											return $1+' props={{attr_only_to_update_component:"123456",'+$2.replace(/"="/g,"\":\"").replace(/ /g,",").replace(/>$/g,"").replace(/^,/g,"")+'}}>';
+											var tmpRtn = $1+' props="{{attr_only_to_update_component:123456,'+$2.replace(/"/g,"'").replace(/>$/g,"").replace(/(=')/g,":'").replace(/" (\w)/g,"',($1)").replace(/'{(.+?)}'/g,'$1')+'}}">';
+											//console.log($1);
+											//console.log($2);
+											//console.log(tmpRtn);
+											return tmpRtn;
 										})
 										.replace(/<require from="([^"]+)"/g,"<delegating-import props=\"{{from:'$1'}}\"")
 										.replace(/<\/require>/g,"</delegating-import>")										
