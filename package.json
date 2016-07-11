@@ -1,6 +1,6 @@
 {
   "name": "gulp-superviewsjs",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "plugin GULP to convert template superview to Incremental DOM",
   "main": "index.js",
   "scripts": {
