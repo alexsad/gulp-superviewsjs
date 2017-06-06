@@ -31,7 +31,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "through-gulp": "^0.5.0",
-    "superviews.js": "3.0.0"
+    "superviews.js": "^3.0.3"
   },
   "devDependencies": {}
 }
